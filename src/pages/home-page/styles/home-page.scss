@@ -1,0 +1,103 @@
+/// Homepage Styles File
+/// Here we import all the Styles files we need for our Homepage.
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+    text-decoration: none;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.card {
+    padding: 16px;
+    margin: 10% auto 0;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    background-color: #fff;
+    width: 600px;
+    height: 570px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    .card__image {
+        background-image: url(https://images.pexels.com/photos/12445654/pexels-photo-12445654.jpeg?cs=srgb&dl=pexels-dmitry-zvolskiy-12445654.jpg&fm=jpg);
+        background-position: 50% 32.5%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        border-radius: 10px;
+        transition: .25s ease-in-out;
+    }
+    .info {
+        margin-top: 32px;
+        display: flex;
+        margin-bottom: 32px;
+        justify-content: space-between;
+        align-items: center;
+        .user__data {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            .user__image {
+                margin-right: 12px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-image: url(https://images.pexels.com/photos/789305/pexels-photo-789305.jpeg?cs=srgb&dl=pexels-anastasiya-lobanovskaya-789305.jpg&fm=jpg);
+            }
+        }
+        .time__ago {
+            color: #7C7C7C;
+        }
+    }
+    .description {
+        margin: 14px 0 32px;
+        color: #7C7C7C;
+        text-overflow: ellipsis;
+    }
+    .read__more {
+        margin-bottom: 8px;
+        display: flex;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        svg {
+            margin-left: 8px;
+        }
+    }
+}
+
+.card:hover {
+    .card__image {
+        transform: scale(1.01);
+    }
+    .read__more {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .card {
+        width: 320px;
+    }
+}
